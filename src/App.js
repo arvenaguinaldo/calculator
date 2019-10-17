@@ -39,7 +39,7 @@ class App extends Component {
           result = parseFloat(a) * parseFloat(b);
           this.setState({input: result})
           break;
-      case '/':
+      case '÷':
           result = parseFloat(a) / parseFloat(b);
           this.setState({input: result})
           break;
