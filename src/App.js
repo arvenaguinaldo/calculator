@@ -17,7 +17,7 @@ class App extends Component {
   handleOperator = val => {
     const {input} = this.state;
     this.setState({a: input})
-    this.setState({input: ''})
+    // this.setState({input: ''})
     this.setState({operator: val})
   }
 
@@ -65,7 +65,7 @@ class App extends Component {
         <div className="container">
           <Input input={this.state.input}></Input>
           <div className="row">
-            <Button onClick={this.handleOperator.bind(this, 'AC')} style={{flex: 2, backgroundColor: '#6C6C6D'}}>AC</Button>
+            <Button onClick={this.handleClear.bind(this, 'AC')} style={{flex: 2, backgroundColor: '#6C6C6D'}}>AC</Button>
             <Button onClick={this.handlePercentage.bind(this, '%')} style={{backgroundColor: '#6C6C6D'}}>%</Button>
             <Button onClick={this.handleOperator.bind(this, '÷')}>÷</Button>
           </div>
