@@ -11,7 +11,14 @@ class App extends Component {
   };
 
   addToInput = val => {
-    this.setState({input: this.state.input + val})
+    const {operator} = this.state;
+
+    if(operator) {
+      this.setState({input: ''})
+      this.setState({input: val})
+    } else {
+      this.setState({input: this.state.input + val})
+    }
   }
 
   handleOperator = val => {
